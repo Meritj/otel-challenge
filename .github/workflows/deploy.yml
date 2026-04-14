@@ -18,6 +18,14 @@ jobs:
       - name: Install Scaleway CLI
         run: curl -s https://raw.githubusercontent.com/scaleway/scaleway-cli/master/scripts/get.sh | bash
 
+      - name: Configure Scaleway CLI
+        run: |
+          scw init \
+            access-key=${{ secrets.SCW_ACCESS_KEY }} \
+            secret-key=${{ secrets.SCW_SECRET_KEY }} \
+            default-region=fr-par \
+            default-zone=fr-par-2
+
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
         with:
