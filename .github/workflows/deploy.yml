@@ -23,6 +23,7 @@ jobs:
           scw init \
             access-key=${{ secrets.SCW_ACCESS_KEY }} \
             secret-key=${{ secrets.SCW_SECRET_KEY }} \
+            organization-id=${{ secrets.SCW_ORGANIZATION_ID }} \
             region=fr-par \
             zone=fr-par-2
 
