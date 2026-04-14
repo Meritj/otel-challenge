@@ -23,8 +23,8 @@ jobs:
           scw init \
             access-key=${{ secrets.SCW_ACCESS_KEY }} \
             secret-key=${{ secrets.SCW_SECRET_KEY }} \
-            default-region=fr-par \
-            default-zone=fr-par-2
+            region=fr-par \
+            zone=fr-par-2
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
