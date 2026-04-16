@@ -19,7 +19,7 @@ spec:
         app: frontend-proxy
     spec:
       containers:
-        - name: nginx
-          image: nginx:latest
+        - name: frontend-proxy
+          image: ghcr.io/open-telemetry/opentelemetry-demo-frontendproxy:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
